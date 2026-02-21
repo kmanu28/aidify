@@ -1,13 +1,91 @@
-# Aidify
+# Aidify 🤝
 
-Aidify is a web platform designed to facilitate community aid and support.
+Aidify is a full-stack web platform built to connect communities, facilitating aid and support where it's needed most. Whether providing resources or seeking assistance, Aidify bridges the gap.
 
-## Project Structure
+## 🚀 Tech Stack
 
-This repository is split into two main sections:
-- `backend/`: Node.js based server handling API requests
-- `frontend/`: React based user interface
+### Frontend
+- **React 19** with **Vite**
+- **TypeScript** for robust typing
+- **React Router** for seamless navigation
+- **ESLint & Globals** for code quality
 
-## Setup
+### Backend
+- **Node.js** & **Express** for a fast, unopinionated web server
+- **MongoDB** & **Mongoose** for flexible NoSQL database interactions
+- **CORS** middleware enabled for seamless frontend-backend communication
 
-Navigate to the respective directories and install dependencies using `npm install`.
+## 📂 Project Structure
+
+```text
+aidify/
+├── backend/          # Node.js/Express server API
+│   ├── models/       # Mongoose database schemas
+│   ├── routes/       # API endpoints (e.g., /api/requests)
+│   ├── index.js      # Main server entry point
+│   └── .env          # Environment variables (MongoDB URI, Port)
+└── frontend/         # React/Vite frontend application
+    ├── public/       # Static assets
+    ├── src/          # React components, pages, and styles
+    └── vite.config.ts # Vite configuration
+```
+
+## 🛠️ Setup & Installation
+
+Follow these steps to get a local copy up and running.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) installed
+- [MongoDB](https://www.mongodb.com/) running locally or a MongoDB Atlas URI
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/kmanu28/aidify.git
+cd aidify
+```
+
+### 2. Setup the Backend
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the `backend` directory and add your MongoDB connection string and port:
+
+```env
+MONGO_URI="mongodb://localhost:27017/aidify" # Example URI
+PORT=3000
+```
+
+Start the backend server:
+
+```bash
+# Using nodemon for development (if installed globally)
+nodemon index.js
+# Or standard start
+node index.js
+```
+
+### 3. Setup the Frontend
+
+Open a new terminal window/tab:
+
+```bash
+cd frontend
+npm install
+```
+
+Start the Vite development server:
+
+```bash
+npm run dev
+```
+
+## 🌐 Running the Application
+
+Once both servers are running:
+- **Frontend** will typically be available at `http://localhost:5173` (check the terminal output from Vite).
+- **Backend API** will be running at `http://localhost:3000`.
