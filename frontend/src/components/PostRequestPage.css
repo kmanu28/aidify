@@ -1,0 +1,229 @@
+.postpage-root {
+  min-height: 100vh;
+  width: 100vw;
+  background: #000;
+  position: relative;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  overflow-x: hidden;
+}
+
+.postpage-title {
+  position: absolute;
+  top: 26px;
+  right: 3vw; 
+  color: #2436a6;
+  font-size: 3rem;
+  font-family: 'Fira Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 4px;
+  z-index: 2;
+}
+
+.postpage-content {
+  display: flex;
+  flex-direction: row;
+  /* Center the content horizontally */
+  justify-content: center;
+  /* Align items vertically */
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh; /* Ensure it takes full height */
+  gap: 5vw; /* Add a gap between left and right columns */
+  padding-top: 120px; /* Add padding to push content down from title */
+  box-sizing: border-box;
+}
+
+.postpage-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 430px;
+  /* Remove fixed margins */
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.postpage-row {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 40px;
+  padding: 0 22px 0 16px;
+  width: 410px;
+  height: 56px;
+  font-size: 1.18rem;
+  font-family: 'Fira Mono', monospace;
+  position: relative;
+}
+
+.postpage-icon {
+  font-size: 1.4rem;
+  margin-right: 7px;
+  color: #000;
+}
+
+.postpage-caret {
+  font-size: 1.1rem;
+  color: #222;
+
+  /* ADDED: Position the caret */
+  position: absolute;
+  right: 25px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allows clicking through to the select */
+}
+
+.postpage-dropdown {
+  border: none;
+  background: transparent;
+  font-size: 1.22rem;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  color: #000;
+  letter-spacing: 1px;
+  
+  /* ADDED: Hide default dropdown arrow */
+  -webkit-appearance: none;
+  appearance: none;
+  
+  /* ADDED: Ensure it fills the container for caret positioning */
+  padding-right: 30px; /* Space for the caret */
+}
+
+/* ADDED: Style for placeholder option */
+.postpage-dropdown:invalid {
+  color: #757575; /* A placeholder-like color */
+}
+
+.postpage-btn {
+  background: #031a7f;
+  color: #fff;
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 33px;
+  width: 190px;
+  padding: 11px;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  margin-top: 18px;
+  margin-left: 6px;
+  transition: background 0.3s;
+}
+.postpage-btn:hover {
+  background: #2436a6;
+}
+
+/* ADDED: New style for the submit error message */
+.postpage-submit-error {
+  color: #d90429; /* A strong red */
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-left: 6px;
+  height: 1.2rem; /* Reserve space */
+}
+
+.postpage-right {
+  /* Remove fixed margins */
+  margin-left: 0;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.postpage-card {
+  background: #d8c8fa;
+  /* INCREASED card size */
+  width: 650px;
+  height: 450px;
+  border-radius: 7px;
+  border: 4px solid #b7a3ef;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 44px 0 34px 0;
+  /* Adjust gap for new field */
+  gap: 20px;
+}
+
+.postpage-card-name {
+  width: 100%;
+  /* INCREASED font size */
+  font-size: 3.5rem;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #292939;
+  outline: none;
+  border: none;
+  background: transparent;
+  /* Remove margin */
+  margin-bottom: 0;
+  padding: 0 38px;
+  box-sizing: border-box;
+}
+
+.postpage-card-name::placeholder {
+  color: #22225a;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.postpage-error-message {
+  color: #d90429;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0 38px;
+  /* Adjust margins for new layout */
+  margin-top: -20px;
+  margin-bottom: -15px;
+  height: 1.1rem;
+}
+
+.postpage-card-desc {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #2a2945;
+  /* INCREASED font size */
+  font-size: 2.3rem;
+  font-family: 'Inter', 'Arial', sans-serif;
+  outline: none;
+  resize: none;
+  padding: 0 38px;
+  box-sizing: border-box;
+  line-height: 1.4;
+  flex-grow: 1; /* This will shrink to make space */
+}
+
+.postpage-card-desc::placeholder {
+  color: #393856;
+  opacity: 1;
+}
+
+/* --- ADDED PHONE FIELD STYLES --- */
+.postpage-card-phone {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #2a2945;
+  font-size: 1.8rem; /* Slightly smaller than description */
+  font-family: 'Inter', 'Arial', sans-serif;
+  outline: none;
+  resize: none;
+  padding: 0 38px;
+  box-sizing: border-box;
+  line-height: 1.4;
+  margin-top: -10px; /* Tighten up spacing a bit */
+}
+
+.postpage-card-phone::placeholder {
+  color: #393856;
+  opacity: 1;
+}

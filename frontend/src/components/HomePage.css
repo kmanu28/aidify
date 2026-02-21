@@ -1,0 +1,118 @@
+.homepage-root {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background: #000;
+}
+
+.homepage-left {
+  flex: 0 0 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 50px;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.homepage-title {
+  font-family: 'Fira Mono', monospace;
+  color: #2436a6;
+  font-size: 3rem;
+  margin-top: 32px;
+  padding-left: 520px;
+  font-weight: bold;
+}
+
+.homepage-doodle {
+  width: 400px;
+  margin-bottom: 25px;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+
+.homepage-main {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.homepage-box {
+  border: 3px solid #986cf8;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin: 0 0 22px 0;
+  background: rgba(60, 0, 120, 0.10);
+}
+
+.homepage-heading {
+  font-size: 3rem;
+  margin: 0;
+  color: #d9d0fa;
+}
+
+.homepage-sub {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 8px;
+  color: #d9d0fa;
+}
+
+.homepage-buttons {
+  display: flex;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.btn-light {
+  background: #d9d0fa;
+  color: #223;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 25px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  /* Add transition for smooth hover */
+  transition: background-color 0.3s ease;
+}
+
+/* ADDED THIS HOVER RULE */
+.btn-light:hover {
+  background-color: #c8bbf5; /* A slightly darker purple */
+}
+
+.btn-dark {
+  background: #2436a6;
+  color: #fff;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 25px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  /* Add transition for smooth hover */
+  transition: background-color 0.3s ease;
+}
+
+/* ADDED THIS HOVER RULE */
+.btn-dark:hover {
+  background-color: #3a4bbd; /* A slightly lighter blue */
+}
+
+.homepage-image-container {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

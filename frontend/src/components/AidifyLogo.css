@@ -1,0 +1,14 @@
+.aidify-logo-topleft {
+  position: absolute;
+  top: 28px;
+  left: 36px;
+  z-index: 50;
+}
+.aidify-logo-link {
+  font-family: 'Fira Mono', monospace;
+  color: #2436a6;
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
