@@ -2,8 +2,6 @@
 
 Aidify is a full-stack web platform built to connect communities, facilitating aid and support where it's needed most. Whether providing resources or seeking assistance, Aidify bridges the gap.
 
-**[🌐 Live Demo]((#))** <!-- Add your deployment link here (e.g., Vercel, Render) -->
-
 <div align="center">
   <img src="frontend/src/assets/image1.gif" alt="Aidify Demo" width="600" />
 </div>
